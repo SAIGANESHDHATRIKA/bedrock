@@ -124,6 +124,7 @@ urlpatterns = (
         {'product': 'Firefox for iOS'}, name='firefox.ios.system_requirements'),
     url('^firefox/releases/$', bedrock.releasenotes.views.releases_index,
         {'product': 'Firefox'}, name='firefox.releases.index'),
+    page('firefox/quantum', 'firefox/quantum.html'),
 
     # Bug 1108828. Different templates for different URL params.
     url('firefox/feedback', views.FeedbackView.as_view(), name='firefox.feedback'),
