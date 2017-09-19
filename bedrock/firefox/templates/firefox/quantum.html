@@ -1,0 +1,191 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% extends "firefox/base-pebbles.html" %}
+
+{% block page_css %}
+  {% stylesheet 'firefox-quantum' %}
+{% endblock %}
+
+{% block page_title %}{{ _('Twice as fast, twice as light') }} | {{ _('Firefox Quantum Browser') }}{% endblock %}
+{% block page_desc %}{{ _('Browse with the fastest Firefox yet and use 56% less computer memory than Chrome.') }}{% endblock %}
+
+{% block site_header %}{% endblock %}
+
+{% block content %}
+<main role="main">
+  <header class="main-header">
+    <div class="header-video">
+      {{ high_res_img('firefox/quantum/new-tab.png', {'alt': '', 'width': '929', 'height': '673'}) }}
+    </div>
+    <div class="content">
+      <div class="header-content">
+        <h1>{{ _('<strong>Firefox</strong> Quantum') }}</h1>
+        <h2>{{ _('New. Fast. Fierce.') }}</h2>
+        <p>{{ _('Launches November 14, 2017. Sign up to stay in the know and get launch updates.') }}</p>
+        <div class="cta-wrapper">
+          <a class="button photon sign-up" href="{{ url('newsletter.firefox') }}">{{ _('Notify me') }}</a>
+          <a class="beta-link" href="{{ url('firefox.channel.desktop')}}#beta">{{ _('Or try beta') }}</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="key-features-section main">
+    <div class="content">
+      <section class="key-feature fast">
+        <div class="key-feature-content">
+          <h2>{{ _('2x faster') }}</h2>
+          <p>
+          {% trans %}
+            The most responsive Firefox ever! Plus, it has up to 68% faster tab switching and 30% quicker
+            start up. Because the Internet waits for no one.
+          {% endtrans %}
+          </p>
+        </div>
+      </section>
+      <section class="key-feature performance">
+        <div class="key-feature-content">
+          <h2>{{ _('Lean, mean speed machine') }}</h2>
+          <p>
+          {% trans %}
+            Firefox Quantum’s new engine uses 56% less memory than Chrome, so other programs won’t slow
+            down during browsing. Now that’s a win-win.
+          {% endtrans %}
+          </p>
+        </div>
+      </section>
+      <section class="key-feature design">
+        <h2>{{ _('Beautiful, intelligent design') }}</h2>
+        <div class="feature-carousel-container">
+          <ul class="feature-carousel">
+            <li class="video-bookmarking">
+              <figure>
+                <video preload="auto" loop muted controls>
+                  <source src="https://assets.mozilla.net/video/quantum/bookmarking.webm" type="video/webm">
+                  <source src="https://assets.mozilla.net/video/quantum/bookmarking.ogv" type="video/ogg; codecs='theora, vorbis'">
+                  <source src="https://assets.mozilla.net/video/quantum/bookmarking.mp4" type="video/mp4">
+                  <img src="{{ static('img/firefox/quantum/carousel/placeholder-bookmarks.png') }}" alt="">
+                </video>
+                <figcaption>{{ _('Bookmarks + Pocket') }}</figcaption>
+              </figure>
+            </li>
+            <li class="video-new-tab">
+              <figure>
+                <video preload="auto" loop muted controls>
+                  <source src="https://assets.mozilla.net/video/quantum/new-tab.webm" type="video/webm">
+                  <source src="https://assets.mozilla.net/video/quantum/new-tab.ogv" type="video/ogg; codecs='theora, vorbis'">
+                  <source src="https://assets.mozilla.net/video/quantum/new-tab.mp4" type="video/mp4">
+                  <img src="{{ static('img/firefox/quantum/carousel/placeholder-new-tab.png') }}" alt="">
+                </video>
+                <figcaption>{{ _('New Tab') }}</figcaption>
+              </figure>
+            </li>
+            <li class="video-screenshots">
+              <figure>
+                <video preload="auto" loop muted controls>
+                  <source src="https://assets.mozilla.net/video/quantum/screenshots.webm" type="video/webm">
+                  <source src="https://assets.mozilla.net/video/quantum/screenshots.ogv" type="video/ogg; codecs='theora, vorbis'">
+                  <source src="https://assets.mozilla.net/video/quantum/screenshots.mp4" type="video/mp4">
+                  <img src="{{ static('img/firefox/quantum/carousel/placeholder-screenshots.png') }}" alt="">
+                </video>
+                <figcaption>{{ _('Screenshots') }}</figcaption>
+              </figure>
+            </li>
+          </ul>
+          <button class="feature-carousel-previous" type="button">{{ _('Previous') }}</button>
+          <button class="feature-carousel-next" type="button">{{ _('Next') }}</button>
+          <p>
+          {% trans %}
+            Hello, gorgeous! Firefox’s sleek, new look comes loaded with intuitive features like
+            in-browser screenshots and more.
+          {% endtrans %}
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="sticky-footer">
+    <div class="content">
+      <div class="footer-content">
+        <p>{{ _('New <strong>Firefox</strong> Quantum arrives November 14, 2017.') }} <a class="button photon-flat" href="{{ url('newsletter.firefox') }}">{{ _('Keep me updated') }}</a></p>
+
+      </div>
+    </div>
+  </div>
+  <section class="other-features">
+    <div class="content">
+      <h2>{{ _('Get the job done… faster') }}</h2>
+      <ul>
+        <li>
+          <h3 class="new-tab">{{ _('New Tab') }}</h3>
+          <p>{{ _('Search across multiple sites, view your top pages and discover new content.') }}</p>
+        </li>
+        <li>
+          <h3 class="library">{{ _('Library') }}</h3>
+          <p>{{ _('Enjoy everything you’ve saved to Firefox while browsing in one, easy place.') }}</p>
+        </li>
+        <li>
+          <h3 class="extensions">{{ _('Extensions') }}</h3>
+          <p>{{ _('Personalize Firefox with your favorite extras that help you do you.') }}</p>
+        </li>
+        <li>
+          <h3 class="mobile-browsing">{{ _('Mobile Browsing') }}</h3>
+          <p>{{ _('Access your bookmarks, open tabs and passwords across all your devices.') }}</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <div class="key-features-section">
+    <div class="content">
+      <section class="key-feature privacy">
+        <div class="key-feature-content">
+          <h2>{{ _('Powerful privacy') }}</h2>
+          <p>
+          {% trans %}
+            You’re in control of your online information. Use Firefox Private Browsing to block ads
+            with trackers for extra peace of mind… and pages that load up to <strong>44% faster</strong>.
+          {% endtrans %}
+          </p>
+        </div>
+      </section>
+      <section class="key-feature mozilla">
+        <div class="key-feature-content">
+          <h2>{{ _('A browser for good') }}</h2>
+          <p>
+          {% trans %}
+            As part of the non-profit Mozilla, Firefox fosters a healthier Internet. With every click,
+            you help support tech education for girls, create trust around factual news, bring civility
+            to the comments section and more.
+          {% endtrans %}
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <section class="secondary-sign-up">
+    <div class="content">
+      <div class="secondary-sign-up-content">
+        <h2>{{ _('Don’t miss out — <strong>Firefox</strong> Quantum launches November 2017.') }}</h2>
+        <p>{{ _('We’ll notify you when it becomes available.') }}</p>
+        <a class="button photon sign-up" href="{{ url('newsletter.firefox') }}">{{ _('Sign me up') }}</a>
+      </div>
+    </div>
+  </section>
+  <section class="newsletter-modal">
+    <div class="content">
+      {{ email_newsletter_form(
+        title=_('Email me when Quantum launches'),
+        subtitle=_('Sign me up for the latest Firefox announcements.'),
+        submit_text=_('Sign up'),
+        spinner_color='#000',
+        button_class='button photon-flat') }}
+    </div>
+  </section>
+
+</main>
+{% endblock %}
+
+{% block js %}
+  {% javascript 'firefox-quantum' %}
+{% endblock %}
